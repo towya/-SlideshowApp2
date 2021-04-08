@@ -16,34 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="kn5-yx-CiN">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="kn5-yx-CiN">
                                 <rect key="frame" x="44" y="707" width="307" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1K-sy-WnC">
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYd-cs-teo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDC-SZ-qGw">
                                         <rect key="frame" x="114" y="0.0" width="79" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="再生/停止"/>
+                                        <connections>
+                                            <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j8n-cC-6Nu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVt-Lf-ubP">
                                         <rect key="frame" x="270" y="0.0" width="37" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="進む"/>
+                                        <connections>
+                                            <action selector="proceed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9b-G1-duu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ss-tF-KL8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neko1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ss-tF-KL8">
                                 <rect key="frame" x="71" y="160" width="253" height="377"/>
+                                <variation key="heightClass=regular-widthClass=compact" image="neko2"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kn5-yx-CiN" firstAttribute="top" secondItem="0Ss-tF-KL8" secondAttribute="bottom" constant="170" id="J7Q-85-3y9"/>
                             <constraint firstItem="kn5-yx-CiN" firstAttribute="centerX" secondItem="0Ss-tF-KL8" secondAttribute="centerX" id="JQd-GJ-pwd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kn5-yx-CiN" secondAttribute="trailing" constant="39" id="LCO-Rs-2ER"/>
                             <constraint firstItem="kn5-yx-CiN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="Ljx-1Y-yW2"/>
@@ -54,6 +63,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Ss-tF-KL8" secondAttribute="trailing" constant="66" id="iMI-sv-UY6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="0Ss-tF-KL8" id="8DG-hP-p98"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,19 +79,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nWk-z0-64H">
-                                <rect key="frame" x="16" y="54" width="358" height="689"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWk-z0-64H">
+                                <rect key="frame" x="16" y="54" width="358" height="385"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wap-TO-TyO">
+                                <rect key="frame" x="177" y="760" width="37" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="戻る"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TY3-6b-FKS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="nWk-z0-64H" firstAttribute="leading" secondItem="TY3-6b-FKS" secondAttribute="leading" constant="16" id="TOn-6S-uMx"/>
-                            <constraint firstItem="TY3-6b-FKS" firstAttribute="bottom" secondItem="nWk-z0-64H" secondAttribute="bottom" constant="67" id="Wdo-nD-kSp"/>
-                            <constraint firstItem="nWk-z0-64H" firstAttribute="centerX" secondItem="1Iz-gP-POA" secondAttribute="centerX" id="e4t-KW-ncX"/>
-                            <constraint firstItem="nWk-z0-64H" firstAttribute="top" secondItem="TY3-6b-FKS" secondAttribute="top" constant="10" id="s4O-wj-l5w"/>
-                            <constraint firstItem="TY3-6b-FKS" firstAttribute="trailing" secondItem="nWk-z0-64H" secondAttribute="trailing" constant="16" id="xIO-2i-cSx"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMo-Pg-Avn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -88,6 +100,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="neko1" width="384" height="512"/>
+        <image name="neko2" width="384" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
