@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         }else if self.nowIndex != 0 {
             self.nowIndex -= 1
         }
+        self.imageView.image = imageArray[nowIndex]
         
     }
     
@@ -42,21 +43,28 @@ class ViewController: UIViewController {
             self.timer.invalidate()
             self.timer = nil
         }
+        
     }
     
     @IBAction func proceed(_ sender: Any) {
+        
         if self.nowIndex != 2 {
             self.nowIndex += 1
         }else if self.nowIndex == 2 {
             self.nowIndex = 0
         }
+        self.imageView.image = imageArray[nowIndex]
+        
     }
     @objc func changeImage(){
+        self.imageView.image = imageArray[nowIndex]
+
         self.nowIndex += 1
         
         if self.nowIndex == imageArray.count {
             self.nowIndex = 0
         }
+        
     }
     
     
