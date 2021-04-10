@@ -9,8 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func tapimage(_ sender: UITapGestureRecognizer) {
+    }
     @IBOutlet weak var imageView: UIImageView!
-
+    @IBOutlet weak var startButton: UIButton!
+    
     var timer:Timer!
     
     var nowIndex:Int = 0
@@ -26,35 +29,42 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sizeUpViewController:SizeUpViewController = segue.destination as! SizeUpViewController
+        sizeUpViewController.images = self.imageView.image!
+    }
+    
     @IBAction func back(_ sender: Any) {
-        if self.nowIndex == 0 {
+        if self.timer == nil {
+            if self.nowIndex == 0 {
             self.nowIndex = 2
         }else if self.nowIndex != 0 {
             self.nowIndex -= 1
         }
         self.imageView.image = imageArray[nowIndex]
-        
+        }
     }
     
     @IBAction func start(_ sender: Any) {
         if self.timer == nil {
             timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
+            self.startButton.setTitle("停止", for: .normal)
         }else {
             self.timer.invalidate()
             self.timer = nil
-        }
+            self.startButton.setTitle("再生", for: .normal)        }
         
     }
     
     @IBAction func proceed(_ sender: Any) {
-        
-        if self.nowIndex != 2 {
-            self.nowIndex += 1
-        }else if self.nowIndex == 2 {
+        if self.timer == nil {
+            if self.nowIndex != 2 {
+            self.nowIndex += 1            
+            }else if self.nowIndex == 2 {
             self.nowIndex = 0
         }
         self.imageView.image = imageArray[nowIndex]
-        
+        }
     }
     @objc func changeImage(){
         self.imageView.image = imageArray[nowIndex]
@@ -67,6 +77,8 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func unwind(_ segue: UIStoryboardSegue){
+    }
     
 }
 

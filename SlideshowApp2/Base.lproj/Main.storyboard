@@ -28,9 +28,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDC-SZ-qGw">
-                                        <rect key="frame" x="114" y="0.0" width="79" height="34"/>
+                                        <rect key="frame" x="135" y="0.0" width="37" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="再生/停止"/>
+                                        <state key="normal" title="再生"/>
                                         <connections>
                                             <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j8n-cC-6Nu"/>
                                         </connections>
@@ -45,8 +45,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ss-tF-KL8">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ss-tF-KL8">
                                 <rect key="frame" x="71" y="160" width="253" height="377"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="18t-g0-NtN" appends="YES" id="5GO-fn-uvI"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,9 +68,16 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="0Ss-tF-KL8" id="8DG-hP-p98"/>
+                        <outlet property="startButton" destination="dDC-SZ-qGw" id="P4x-gC-zzj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="18t-g0-NtN">
+                    <connections>
+                        <action selector="tapimage:" destination="BYZ-38-t0r" id="fEH-oY-2D8"/>
+                        <segue destination="TDx-4X-5bI" kind="show" id="Z2v-pP-tfp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="20" y="93.838862559241704"/>
         </scene>
@@ -75,25 +86,41 @@
             <objects>
                 <viewController id="TDx-4X-5bI" customClass="SizeUpViewController" customModule="SlideshowApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Iz-gP-POA">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWk-z0-64H">
-                                <rect key="frame" x="16" y="54" width="358" height="385"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nWk-z0-64H">
+                                <rect key="frame" x="16" y="20" width="358" height="668"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wap-TO-TyO">
-                                <rect key="frame" x="177" y="760" width="37" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wap-TO-TyO">
+                                <rect key="frame" x="173.33333333333334" y="696" width="43.333333333333343" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="9Er-uJ-Hvj" kind="unwind" unwindAction="unwind:" id="CXI-Ih-Pu0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TY3-6b-FKS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wap-TO-TyO" firstAttribute="centerX" secondItem="1Iz-gP-POA" secondAttribute="centerX" id="7qi-9u-pKR"/>
+                            <constraint firstItem="nWk-z0-64H" firstAttribute="top" secondItem="TY3-6b-FKS" secondAttribute="top" constant="20" id="Agk-Pa-0me"/>
+                            <constraint firstItem="TY3-6b-FKS" firstAttribute="bottom" secondItem="Wap-TO-TyO" secondAttribute="bottom" constant="22" id="PZj-of-DUO"/>
+                            <constraint firstItem="TY3-6b-FKS" firstAttribute="trailing" secondItem="Wap-TO-TyO" secondAttribute="trailing" constant="173.33000000000001" id="Rky-hX-FQd"/>
+                            <constraint firstItem="TY3-6b-FKS" firstAttribute="trailing" secondItem="nWk-z0-64H" secondAttribute="trailing" constant="16" id="X2P-yo-axm"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="nWk-z0-64H" secondAttribute="bottom" constant="68" id="eqa-ef-Wgs"/>
+                            <constraint firstItem="nWk-z0-64H" firstAttribute="centerX" secondItem="1Iz-gP-POA" secondAttribute="centerX" id="fU8-0b-d4y"/>
+                            <constraint firstItem="nWk-z0-64H" firstAttribute="leading" secondItem="TY3-6b-FKS" secondAttribute="leading" constant="16" id="xcf-Mv-ypt"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6tI-bJ-ipo"/>
+                    <connections>
+                        <outlet property="imageView" destination="nWk-z0-64H" id="Pg7-of-cEG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMo-Pg-Avn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9Er-uJ-Hvj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="696.92307692307691" y="93.838862559241704"/>
         </scene>

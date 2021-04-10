@@ -9,11 +9,19 @@ import UIKit
 
 class SizeUpViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var images =  UIImage(named: "neko1")!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.imageView.image = images
+        
+    
     }
+        // Do any additional setup after loading the view.
+    
     
 
     /*
