@@ -10,8 +10,8 @@ import UIKit
 class SizeUpViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    
-    var images =  UIImage(named: "neko1")!
+    var images:UIImage!
+//    var images =  UIImage(named: "neko1")!
     
     override func viewDidLoad() {
         super.viewDidLoad()

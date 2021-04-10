@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     var timer:Timer!
     
+    
     var nowIndex:Int = 0
     
     var imageArray: [UIImage] = [
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.imageView.image = imageArray[nowIndex]
         // Do any additional setup after loading the view.
     }
 
@@ -37,7 +39,8 @@ class ViewController: UIViewController {
     @IBAction func back(_ sender: Any) {
         if self.timer == nil {
             if self.nowIndex == 0 {
-            self.nowIndex = 2
+                self.nowIndex = imageArray.count-1
+//            self.nowIndex = 2
         }else if self.nowIndex != 0 {
             self.nowIndex -= 1
         }
