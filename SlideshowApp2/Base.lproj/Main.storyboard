@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="E1K-sy-WnC" id="wW2-mw-c6g"/>
                         <outlet property="imageView" destination="0Ss-tF-KL8" id="8DG-hP-p98"/>
+                        <outlet property="proceedButton" destination="TVt-Lf-ubP" id="mQK-a6-NG7"/>
                         <outlet property="startButton" destination="dDC-SZ-qGw" id="P4x-gC-zzj"/>
                     </connections>
                 </viewController>
@@ -84,16 +86,16 @@
         <!--Size Up View Controller-->
         <scene sceneID="ebw-TP-qlj">
             <objects>
-                <viewController id="TDx-4X-5bI" customClass="SizeUpViewController" customModule="SlideshowApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TDx-4X-5bI" customClass="SizeUpViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Iz-gP-POA">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nWk-z0-64H">
-                                <rect key="frame" x="16" y="20" width="358" height="668"/>
+                                <rect key="frame" x="16" y="20" width="358" height="649"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wap-TO-TyO">
-                                <rect key="frame" x="173.33333333333334" y="696" width="43.333333333333343" height="38"/>
+                                <rect key="frame" x="173.66666666666666" y="688" width="43" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
@@ -104,13 +106,12 @@
                         <viewLayoutGuide key="safeArea" id="TY3-6b-FKS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Wap-TO-TyO" firstAttribute="top" secondItem="nWk-z0-64H" secondAttribute="bottom" constant="19" id="6kD-ui-hRG"/>
                             <constraint firstItem="Wap-TO-TyO" firstAttribute="centerX" secondItem="1Iz-gP-POA" secondAttribute="centerX" id="7qi-9u-pKR"/>
-                            <constraint firstItem="nWk-z0-64H" firstAttribute="top" secondItem="TY3-6b-FKS" secondAttribute="top" constant="20" id="Agk-Pa-0me"/>
-                            <constraint firstItem="TY3-6b-FKS" firstAttribute="bottom" secondItem="Wap-TO-TyO" secondAttribute="bottom" constant="22" id="PZj-of-DUO"/>
-                            <constraint firstItem="TY3-6b-FKS" firstAttribute="trailing" secondItem="Wap-TO-TyO" secondAttribute="trailing" constant="173.33000000000001" id="Rky-hX-FQd"/>
+                            <constraint firstItem="TY3-6b-FKS" firstAttribute="bottom" secondItem="Wap-TO-TyO" secondAttribute="bottom" constant="30" id="Og6-JM-dJq"/>
                             <constraint firstItem="TY3-6b-FKS" firstAttribute="trailing" secondItem="nWk-z0-64H" secondAttribute="trailing" constant="16" id="X2P-yo-axm"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="nWk-z0-64H" secondAttribute="bottom" constant="68" id="eqa-ef-Wgs"/>
                             <constraint firstItem="nWk-z0-64H" firstAttribute="centerX" secondItem="1Iz-gP-POA" secondAttribute="centerX" id="fU8-0b-d4y"/>
+                            <constraint firstItem="nWk-z0-64H" firstAttribute="top" secondItem="TY3-6b-FKS" secondAttribute="top" constant="20" id="iEd-mT-mvv"/>
                             <constraint firstItem="nWk-z0-64H" firstAttribute="leading" secondItem="TY3-6b-FKS" secondAttribute="leading" constant="16" id="xcf-Mv-ypt"/>
                         </constraints>
                     </view>
