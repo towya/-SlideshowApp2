@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2035D65826231DAA00FD2781 /* inu in Resources */ = {isa = PBXBuildFile; fileRef = 2035D65726231DAA00FD2781 /* inu */; };
 		20619FC4261D777A007A7E90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20619FC3261D777A007A7E90 /* AppDelegate.swift */; };
 		20619FC6261D777A007A7E90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20619FC5261D777A007A7E90 /* SceneDelegate.swift */; };
 		20619FC8261D777A007A7E90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20619FC7261D777A007A7E90 /* ViewController.swift */; };
@@ -20,7 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		20619FC0261D777A007A7E90 /* SlideshowApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2035D65726231DAA00FD2781 /* inu */ = {isa = PBXFileReference; lastKnownFileType = file; path = inu; sourceTree = "<group>"; };
+		20619FC0261D777A007A7E90 /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20619FC3261D777A007A7E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20619FC5261D777A007A7E90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		20619FC7261D777A007A7E90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,9 +30,9 @@
 		20619FCC261D777C007A7E90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20619FCF261D777C007A7E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20619FD1261D777C007A7E90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20619FD8261D77B0007A7E90 /* neko1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = neko1; sourceTree = "<group>"; };
-		20619FDB261D77C4007A7E90 /* neko2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = neko2; sourceTree = "<group>"; };
-		20619FDE261D77D3007A7E90 /* neko3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = neko3; sourceTree = "<group>"; };
+		20619FD8261D77B0007A7E90 /* neko1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = neko1; sourceTree = "<group>"; };
+		20619FDB261D77C4007A7E90 /* neko2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = neko2; sourceTree = "<group>"; };
+		20619FDE261D77D3007A7E90 /* neko3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = neko3; sourceTree = "<group>"; };
 		20619FE1261D7A6A007A7E90 /* SizeUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +50,7 @@
 		20619FB7261D777A007A7E90 = {
 			isa = PBXGroup;
 			children = (
-				20619FC2261D777A007A7E90 /* SlideshowApp2 */,
+				20619FC2261D777A007A7E90 /* SlideshowApp */,
 				20619FC1261D777A007A7E90 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,12 +58,12 @@
 		20619FC1261D777A007A7E90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20619FC0261D777A007A7E90 /* SlideshowApp2.app */,
+				20619FC0261D777A007A7E90 /* SlideshowApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		20619FC2261D777A007A7E90 /* SlideshowApp2 */ = {
+		20619FC2261D777A007A7E90 /* SlideshowApp */ = {
 			isa = PBXGroup;
 			children = (
 				20619FC3261D777A007A7E90 /* AppDelegate.swift */,
@@ -73,18 +75,19 @@
 				20619FD8261D77B0007A7E90 /* neko1 */,
 				20619FDB261D77C4007A7E90 /* neko2 */,
 				20619FDE261D77D3007A7E90 /* neko3 */,
+				2035D65726231DAA00FD2781 /* inu */,
 				20619FCE261D777C007A7E90 /* LaunchScreen.storyboard */,
 				20619FD1261D777C007A7E90 /* Info.plist */,
 			);
-			path = SlideshowApp2;
+			path = SlideshowApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		20619FBF261D777A007A7E90 /* SlideshowApp2 */ = {
+		20619FBF261D777A007A7E90 /* SlideshowApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20619FD4261D777C007A7E90 /* Build configuration list for PBXNativeTarget "SlideshowApp2" */;
+			buildConfigurationList = 20619FD4261D777C007A7E90 /* Build configuration list for PBXNativeTarget "SlideshowApp" */;
 			buildPhases = (
 				20619FBC261D777A007A7E90 /* Sources */,
 				20619FBD261D777A007A7E90 /* Frameworks */,
@@ -94,9 +97,9 @@
 			);
 			dependencies = (
 			);
-			name = SlideshowApp2;
+			name = SlideshowApp;
 			productName = SlideshowApp2;
-			productReference = 20619FC0261D777A007A7E90 /* SlideshowApp2.app */;
+			productReference = 20619FC0261D777A007A7E90 /* SlideshowApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 20619FBB261D777A007A7E90 /* Build configuration list for PBXProject "SlideshowApp2" */;
+			buildConfigurationList = 20619FBB261D777A007A7E90 /* Build configuration list for PBXProject "SlideshowApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,7 +129,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				20619FBF261D777A007A7E90 /* SlideshowApp2 */,
+				20619FBF261D777A007A7E90 /* SlideshowApp */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +141,7 @@
 			files = (
 				20619FDF261D77D3007A7E90 /* neko3 in Resources */,
 				20619FD9261D77B0007A7E90 /* neko1 in Resources */,
+				2035D65826231DAA00FD2781 /* inu in Resources */,
 				20619FD0261D777C007A7E90 /* LaunchScreen.storyboard in Resources */,
 				20619FCD261D777C007A7E90 /* Assets.xcassets in Resources */,
 				20619FDC261D77C4007A7E90 /* neko2 in Resources */,
@@ -304,12 +308,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CYT545QD6;
-				INFOPLIST_FILE = SlideshowApp2/Info.plist;
+				INFOPLIST_FILE = SlideshowApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.tempati.SlideshowApp2;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.tempati.SlideshowApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,12 +327,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CYT545QD6;
-				INFOPLIST_FILE = SlideshowApp2/Info.plist;
+				INFOPLIST_FILE = SlideshowApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.tempati.SlideshowApp2;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.tempati.SlideshowApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,7 +342,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20619FBB261D777A007A7E90 /* Build configuration list for PBXProject "SlideshowApp2" */ = {
+		20619FBB261D777A007A7E90 /* Build configuration list for PBXProject "SlideshowApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20619FD2261D777C007A7E90 /* Debug */,
@@ -347,7 +351,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20619FD4261D777C007A7E90 /* Build configuration list for PBXNativeTarget "SlideshowApp2" */ = {
+		20619FD4261D777C007A7E90 /* Build configuration list for PBXNativeTarget "SlideshowApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20619FD5261D777C007A7E90 /* Debug */,
