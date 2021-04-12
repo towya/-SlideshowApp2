@@ -39,7 +39,6 @@ class ViewController: UIViewController {
         if self.timer != nil {
             self.timer.invalidate()
         }
-        
         let sizeUpViewController:SizeUpViewController = segue.destination as! SizeUpViewController
         sizeUpViewController.images = self.imageView.image!
     }
@@ -101,11 +100,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue){
-        if self.timer == nil {
-            self.proceedButton.isEnabled = false
-            self.backButton.isEnabled = false
-            timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
-        }else {
+        if self.timer != nil {
             self.proceedButton.isEnabled = true
             self.backButton.isEnabled = true
             self.timer.invalidate()
